@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smothing: grayscale;
+}
+
+input {
+  border: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monac, Consolas, 'Courier New', monospace;
+}
