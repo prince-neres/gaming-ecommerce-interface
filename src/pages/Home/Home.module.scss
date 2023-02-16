@@ -1,12 +1,9 @@
-.header {
-  padding-bottom: 250px;
-}
+@import 'styles/breakpoints';
 
-.categorias {
+.categories {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 100px 0;
   transform: translateY(-250px);
 
   h1 {
@@ -20,7 +17,7 @@
     gap: 50px;
     justify-content: center;
     top: calc(100% - 150px);
-    width: 90%;
+    width: 100%;
 
     >div {
       align-items: center;
@@ -29,13 +26,13 @@
       flex-direction: column;
 
       h1 {
-        color: #041833;
-        font-size: 25px;
+        color: #FFF;
+        font-size: 50px;
       }
+    }
 
-      >img {
-        border-radius: 144px;
-      }
+    img {
+      max-width: 75%;
     }
   }
 }
