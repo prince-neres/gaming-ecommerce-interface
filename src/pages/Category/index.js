@@ -11,6 +11,10 @@ export default function Category() {
     products: state.products.filter(product => product.category === nomeCategoria),
   }));
 
+  const products_ordered = products.sort(function (a, b) {
+    return a.score > b.score ? -1 : a.score < b.score ? 1 : 0;
+  });
+
   return (
     <div>
       <Header
@@ -19,7 +23,7 @@ export default function Category() {
         descricao={category.description}
       />
       <div className={styles.products}>
-        {products?.map(product => (
+        {products_ordered?.map(product => (
           <Product key={product.id} {...product} />
         ))}
       </div>
