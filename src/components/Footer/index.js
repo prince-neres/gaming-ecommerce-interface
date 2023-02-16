@@ -19,7 +19,8 @@ export default function Footer() {
         <FaInstagram {...iconeProps} />
       </div>
       <span>
-        Desenvolvido por @Prince Neres
+        Desenvolvido por
+        <a href='https://github.com/prince-neres' target='_blank'> @Prince Neres</a> - 2023
       </span>
     </footer>
   )

@@ -28,7 +28,7 @@ export default function Navbar() {
         <Search />
       </div>
       <div className={styles.icones}>
-        <a href="/carrinho">
+        <a href='/carrinho'>
           {window.location.pathname === '/carrinho'
             ? <RiShoppingCartFill {...iconeProps} />
             : <RiShoppingCart2Line {...iconeProps} />

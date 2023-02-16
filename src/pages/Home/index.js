@@ -11,7 +11,7 @@ export default function Home () {
   return (
     <div>
       <Header
-        titulo="Adquira seus produtos de gamer aqui!"
+        titulo='Adquira seus produtos de gamer aqui!'
         imagem={gamingDevices}
         className={styles.header}
       />
@@ -22,8 +22,8 @@ export default function Home () {
         <div className={styles['categories-container']}>
           {categories.map((category, index) => (
             <div key={index} onClick={() => navigate(`/categoria/${category.id}`)}>
-              <img src={category.image} alt={category.name} />
               <h1>{category.name}</h1>
+              <img src={category.image} alt={category.name} />
             </div>
           ))}
         </div>
