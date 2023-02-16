@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 import styles from './Category.module.scss'
 
 export default function Category() {
-  const { nomeCategoria } = useParams();
+  const { nameCategory } = useParams();
   const { category, products } = useSelector(state =>({
-    category: state.categories.find(category => category.id === nomeCategoria),
-    products: state.products.filter(product => product.category === nomeCategoria),
+    category: state.categories.find(category => category.id === nameCategory),
+    products: state.products.filter(product => product.category === nameCategory),
   }));
 
   const products_ordered = products.sort(function (a, b) {

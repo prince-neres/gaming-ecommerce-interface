@@ -29,10 +29,10 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <div className={styles.busca}>
+      <div className={styles.search}>
         <Search />
       </div>
-      <div className={styles.icones}>
+      <div className={styles.icons}>
         <a href='/carrinho'>
           {window.location.pathname === '/carrinho'
             ? <RiShoppingCartFill {...iconeProps} />
