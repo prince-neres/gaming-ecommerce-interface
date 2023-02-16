@@ -12,7 +12,7 @@
     padding: 16px 16px 0px 16px;
 
     h2 {
-      color: #ff7300;
+      color: #42464d;
       font-size: 20px;
     }
 
@@ -26,10 +26,12 @@
   }
 
   &-score {
-    padding: 0px 0px 10px 0px;
-    font-size: 20px;
-    color: #00ff11;
+    font-size: 18px;
+    color: #ff0000;
     font-weight: bold;
+    line-height: 0.1em;
+    display: flex;
+    flex-direction: column;
   }
 
   &-info {
@@ -40,7 +42,9 @@
   &-price {
     font-weight: bold;
     align-items: center;
-    color: #ff7300;
+    background-color: #ff7300;
+    border-radius: 4px;
+    color: #FFF;
     display: flex;
     font-size: 20px;
     height: 70px;

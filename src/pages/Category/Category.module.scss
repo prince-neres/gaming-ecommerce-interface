@@ -1,11 +1,8 @@
-.header {
-  padding: 100px 120px 30px 120px;
-}
-
 .products {
+  margin-top: -250px;
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
 }
