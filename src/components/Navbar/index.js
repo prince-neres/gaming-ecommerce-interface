@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { RiShoppingCart2Line, RiShoppingCartFill } from 'react-icons/ri';
 import { GiConsoleController } from 'react-icons/gi';
 import Search from 'components/Search';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 
 const iconeProps = {
   color: 'white',
@@ -10,18 +12,21 @@ const iconeProps = {
 };
 
 export default function Navbar() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <nav className={styles.nav}>
-      <span className={styles.logo}>
+      <span className={styles.logo} onClick={() => navigate('/')}>
         <GiConsoleController {...iconeProps} size={60} />
       </span>
       <div className={styles.links}>
         <div>
-          <a href='/' className={classNames(styles.link, {
-            [styles.selected]: window.location.pathname === '/'
+          <Link to='/' className={classNames(styles.link, {
+            [styles.selected]: location.pathname === '/'
           })}>
             Página inicial
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.busca}>
