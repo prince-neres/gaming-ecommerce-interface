@@ -4,6 +4,9 @@ import {
   AiFillHeart
 } from 'react-icons/ai'
 import { FaCartPlus, FaFireAlt } from 'react-icons/fa'
+import { changeFavorite } from 'store/reducers/products';
+import { useDispatch } from 'react-redux';
+
 
 const iconeProps = {
   size: 24,
@@ -12,12 +15,19 @@ const iconeProps = {
 
 export default function Product(props) {
   const {
+    id,
     name,
     price,
     score,
     image,
     favorite
   } = props
+
+  const dispatch = useDispatch();
+
+  const resolveFavorite = () => {
+    dispatch(changeFavorite(id));
+  };
 
   return (
     <div className={styles.product}>
@@ -38,8 +48,8 @@ export default function Product(props) {
         <div className={styles['product-actions']}>
           <span className={styles['product-action']}>
             {favorite
-              ? <AiFillHeart {...iconeProps} color='#FF0000' />
-              : <AiOutlineHeart {...iconeProps} />
+              ? <AiFillHeart {...iconeProps} color='#FF0000' onClick={resolveFavorite} />
+              : <AiOutlineHeart {...iconeProps} onClick={resolveFavorite} />
             }
           </span>
           <span className={styles['product-action']}>
