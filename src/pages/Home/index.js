@@ -1,19 +1,12 @@
 import styles from './Home.module.scss';
 import Header from 'components/Header';
-import gamesBanner from 'assets/banner-games.jpg';
 import gamingDevices from 'assets/gaming-devices.jpg';
 import { useNavigate } from 'react-router-dom';
-
-const categories = [{
-  id: "Jogos",
-  name: "Jogos",
-  description: "Os melhores e mais populares jogos estão aqui!",
-  thumbnail: gamesBanner
-}]
+import { useSelector } from 'react-redux';
 
 export default function Home () {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const categories = useSelector(state => state.categories);
 
   return (
     <div>
@@ -29,7 +22,7 @@ export default function Home () {
         <div className={styles['categories-container']}>
           {categories.map((category, index) => (
             <div key={index} onClick={() => navigate(`/categoria/${category.id}`)}>
-              <img src={category.thumbnail} alt={category.name} />
+              <img src={category.image} alt={category.name} />
               <h1>{category.name}</h1>
             </div>
           ))}
