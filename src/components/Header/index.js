@@ -5,13 +5,17 @@ export default function Header ({titulo, descricao, className = '', imagem}) {
     <header className={`${styles.header} ${className}`}>
       <div className={styles['header-texto']}>
         <h1>{titulo}</h1>
+        <p>{descricao}</p>
       </div>
-      <div className={styles['header-imagem']}>
-        <img
-          alt={titulo}
-          src={imagem}
-        />
-      </div>
+        {imagem
+        ? <div className={styles['header-imagem']}> 
+            <img
+                alt={titulo}
+                src={imagem}
+              />
+          </div>
+          : null
+        }
     </header>
   )
 };

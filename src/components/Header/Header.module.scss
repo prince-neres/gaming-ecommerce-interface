@@ -24,16 +24,9 @@
   }
 
   &-texto {
-    color: white;
+    color: #ff7300;
     grid-area: texto;
-
-    h1 {
-      font-size: 50px;
-    }
-
-    h2 {
-      font-size: 25px;
-    }
+    font-size: 18px;
   }
 
   &-button {
@@ -45,6 +38,8 @@
   }
 
   &-imagem {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4px;
     align-self: center;
     grid-area: imagem;
     justify-self: center;

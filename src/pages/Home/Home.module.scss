@@ -7,8 +7,7 @@
   transform: translateY(-250px);
 
   h1 {
-    color: white;
-    font-size: 40px;
+    color: #ff7300;
   }
 
   &-container {
@@ -20,19 +19,24 @@
     width: 100%;
 
     >div {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       align-items: center;
       cursor: pointer;
       display: flex;
       flex-direction: column;
+      padding: 20px;
 
       h1 {
-        color: #FFF;
-        font-size: 50px;
+        color: #ff7300;
       }
     }
 
+    >div:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
     img {
-      max-width: 75%;
+      max-width: 80%;
     }
   }
 }

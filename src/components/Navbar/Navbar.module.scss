@@ -2,7 +2,7 @@
 
 .nav {
   align-items: center;
-  background-color: black;
+  background-color: #ff7300;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas: 'logo links busca icones';
@@ -48,6 +48,7 @@
 .link {
   color: white;
   font-size: 22px;
+  text-decoration: none;
 }
 
 .busca {

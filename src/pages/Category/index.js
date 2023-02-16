@@ -1,7 +1,8 @@
 import Header from 'components/Header';
+import Product from 'components/Product';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import style from './Category.module.scss'
+import styles from './Category.module.scss'
 
 export default function Category() {
   const { nomeCategoria } = useParams();
@@ -13,15 +14,13 @@ export default function Category() {
   return (
     <div>
       <Header
+        className={styles.header}
         titulo={category.name}
         descricao={category.description}
-        imagem={category.image}
       />
-      <div className={style.products}>
+      <div className={styles.products}>
         {products?.map(product => (
-          <div key={product.id}>
-            {product.name}
-          </div>
+          <Product key={product.id} {...product} />
         ))}
       </div>
     </div>

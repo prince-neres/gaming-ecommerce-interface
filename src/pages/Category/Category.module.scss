@@ -1,7 +1,11 @@
+.header {
+  padding: 100px 120px 30px 120px;
+}
+
 .products {
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  margin: 50px 50px;
 }
