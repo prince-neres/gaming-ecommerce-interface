@@ -43,12 +43,16 @@ export default function Cart () {
             Subtotal: <strong>R$ {total.toFixed(2)}</strong>
           </span>
         </div>
-        <button
-          className={styles.finally}
-          onClick={() => dispatch(resetCart())}
-        >
-          Finalizar compra
-        </button>
+        {total
+          ? 
+            <button
+              className={styles.finally}
+              onClick={() => dispatch(resetCart())}
+            >
+              Finalizar compra
+            </button>
+          : null
+        }
       </div>
     </div>
   )
