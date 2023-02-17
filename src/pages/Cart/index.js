@@ -5,16 +5,21 @@ import Product from 'components/Product';
 
 export default function Cart () {
 
-  const cart = useSelector(state => {
+  const { cart, total } = useSelector(state => {
+    let total = 0
     const cartReduce = state.cart.reduce((products, productInCart) => {
       const product = state.products.find(product => product.id === productInCart.id);
+      total += (product.price * productInCart.quantity);
       products.push({
         ...product,
         quantity: productInCart.quantity,
       })
       return products;
     }, []);
-    return cartReduce;
+    return {
+      cart: cartReduce,
+      total
+    };
   });
 
   console.log(cart)
@@ -31,7 +36,7 @@ export default function Cart () {
         <div className={styles.total}>
           <strong>Resumo da compra</strong>
           <span>
-            Subtotal: <strong>R$ {0.0.toFixed(2)}</strong>
+            Subtotal: <strong>R$ {total.toFixed(2)}</strong>
           </span>
         </div>
       </div>
