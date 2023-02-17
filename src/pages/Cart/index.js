@@ -8,13 +8,18 @@ export default function Cart () {
   const dispatch = useDispatch()
   const { cart, total } = useSelector(state => {
     let total = 0
+    const regx = new RegExp(state.search)
     const cartReduce = state.cart.reduce((products, productInCart) => {
       const product = state.products.find(product => product.id === productInCart.id);
       total += (product.price * productInCart.quantity);
-      products.push({
-        ...product,
-        quantity: productInCart.quantity,
-      })
+
+      if(product.name.match(regx)) {
+        products.push({
+          ...product,
+          quantity: productInCart.quantity,
+        })
+      }
+
       return products;
     }, []);
     return {

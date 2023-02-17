@@ -6,10 +6,15 @@ import styles from './Category.module.scss'
 
 export default function Category() {
   const { nameCategory } = useParams();
-  const { category, products } = useSelector(state =>({
-    category: state.categories.find(category => category.id === nameCategory),
-    products: state.products.filter(product => product.category === nameCategory),
-  }));
+  const { category, products } = useSelector(state => {
+
+    const regx = new RegExp(state.search, 'i');
+
+    return {
+      category: state.categories.find(category => category.id === nameCategory),
+      products: state.products.filter(product => product.category === nameCategory && product.name.match(regx)),
+    }
+  });
 
   const products_ordered = products.sort(function (a, b) {
     return a.score > b.score ? -1 : a.score < b.score ? 1 : 0;
