@@ -20,7 +20,7 @@ export default function Footer() {
       </div>
       <span>
         Desenvolvido por
-        <a href='https://github.com/prince-neres' target='_blank'> @Prince Neres</a> - 2023
+        <a href='https://github.com/prince-neres' target='_blank' rel="noreferrer"> @Prince Neres</a> - 2023
       </span>
     </footer>
   )
