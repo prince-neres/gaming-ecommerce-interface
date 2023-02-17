@@ -1,21 +1,13 @@
 @import 'styles/breakpoints';
 
 .header {
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 150px 120px 300px 120px;
-  position: relative;
+  padding: 50px 100px 50px 100px;
   display: grid;
   grid-template-areas: 'texto imagem';
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
 
-  @media(max-width: $mobile-sm) {
-    padding: 250px 50px 250px 50px;
-  }
-
   @media(max-width: $tablet) {
-    padding-top: 250px;
     gap: 20px;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
@@ -23,10 +15,14 @@
     text-align: center;
   }
 
-  &-text {
+  h1 {
     color: #ff7300;
+  }
+
+  &-text {
+    color: #42464d;;
     grid-area: texto;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   &-button {

@@ -7,6 +7,7 @@ import { FaCartPlus, FaFireAlt } from 'react-icons/fa'
 import { changeFavorite } from 'store/reducers/products';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeCart } from 'store/reducers/cart';
+import classNames from 'classnames';
 
 
 const iconeProps = {
@@ -21,7 +22,8 @@ export default function Product(props) {
     price,
     score,
     image,
-    favorite
+    favorite,
+    cart,
   } = props
 
   const dispatch = useDispatch();
@@ -37,7 +39,9 @@ export default function Product(props) {
   };
 
   return (
-    <div className={styles.product}>
+    <div className={classNames(styles.product, {
+      [styles.productInCart]: cart,
+    })}>
       <div className={styles['product.image']}>
         <img src={image} alt={name} />
       </div>

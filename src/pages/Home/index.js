@@ -12,8 +12,8 @@ export default function Home () {
     <div>
       <Header
         titulo='Adquira seus produtos de gamer aqui!'
+        descricao='Uma nova perspectiva de vida'
         imagem={gamingDevices}
-        className={styles.header}
       />
       <div className={styles.categories}>
         <div className={styles['categories-title']}>

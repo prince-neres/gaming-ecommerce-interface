@@ -1,16 +1,16 @@
 .cart {
-  align-items: flex-end;
   display: flex;
   flex-direction: column;
+  padding: 0px 100px 0px 100px;
   gap: 30px;
-  padding: 50px 100px;
+  width: 100%;
+  justify-content: center;
 }
 
 .total {
-  background-color: #EFF9FF;
+  background-color: #fafafb;
   display: flex;
   justify-content: space-between;
   max-width: 800px;
-  padding: 16px;
-  width: 100%;
+  padding: 50px 100px 50px 100px;
 }

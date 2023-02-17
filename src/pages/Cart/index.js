@@ -24,9 +24,10 @@ export default function Cart () {
       <Header
         titulo='Carrinho de Compras'
         descricao='Confira os produtos que você adicionou ao carrinho:'
+        className={styles.header}
       />
       <div className={styles.cart}>
-        {cart.map(product => <Product key={product.id} {...product}/>)}
+        {cart.map(product => <Product key={product.id} {...product} cart />)}
         <div className={styles.total}>
           <strong>Resumo da compra</strong>
           <span>

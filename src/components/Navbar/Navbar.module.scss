@@ -8,8 +8,7 @@
   grid-template-areas: 'logo links busca icones';
   height: 100px;
   padding: 0 100px;
-  position: absolute;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 
   @media(max-width: $tablet) {
