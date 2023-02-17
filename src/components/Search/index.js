@@ -11,7 +11,7 @@ export default function Search() {
   
   useEffect(() => {
     dispatch(resetSearch());
-  }, [location.pathname], dispatch)
+  }, [location.pathname, dispatch])
 
   return (
     <div className={styles.search}>
