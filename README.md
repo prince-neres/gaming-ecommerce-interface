@@ -4,8 +4,13 @@ Projeto feito como desafio.
 ## Como rodar passpo a passo:
 1. Clone o projeto com `git clone https://github.com/prince-neres/gaming-e-commerce-interface.git`
 2. Entre no diretório do projeto com `cd gaming-e-commerce-interface `
+
+### Com NPM ou Yarn
 1. `npm i` ou `yarn`
 2. `npm start` ou `yarn start`
+
+### Com Docker
+1. `docker-compose up`
 
 ## Preview:
 <h3 align="center">Página incial</h3>
