@@ -1,7 +1,7 @@
 .cart {
   display: flex;
   flex-direction: column;
-  padding: 0px 100px 0px 100px;
+  padding: 0px 100px 50px 100px;
   gap: 30px;
   width: 100%;
   justify-content: center;
@@ -13,4 +13,17 @@
   justify-content: space-between;
   max-width: 800px;
   padding: 50px 100px 50px 100px;
+}
+
+.finally {
+  background-color: #0d7f00;
+  border-radius: 10px;
+  border: none;
+  width: 400px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 25px;
+  margin: 0 auto;
 }

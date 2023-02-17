@@ -22,10 +22,11 @@ const cartSlice = createSlice({
         if(productInCart.id === payload.id) productInCart.quantity += payload.quantity;
         return productInCart;
       })
-    }
+    },
+    resetCart: () => initialState,
   }
 });
 
-export const { changeCart, changeQuantity } = cartSlice.actions;
+export const { changeCart, changeQuantity, resetCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
