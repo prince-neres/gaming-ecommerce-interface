@@ -1,17 +1,24 @@
 import styles from './Product.module.scss';
 import { 
   AiOutlineHeart,
-  AiFillHeart
+  AiFillHeart,
+  AiFillMinusCircle,
+  AiFillPlusCircle,
 } from 'react-icons/ai'
 import { FaCartPlus, FaFireAlt } from 'react-icons/fa'
 import { changeFavorite } from 'store/reducers/products';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeCart } from 'store/reducers/cart';
+import { changeCart, changeQuantity } from 'store/reducers/cart';
 import classNames from 'classnames';
 
 
 const iconeProps = {
   size: 24,
+  color: '#ff7300'
+}
+
+const quantityProps = {
+  size: 32,
   color: '#ff7300'
 }
 
@@ -24,6 +31,7 @@ export default function Product(props) {
     image,
     favorite,
     cart,
+    quantity,
   } = props
 
   const dispatch = useDispatch();
@@ -64,11 +72,31 @@ export default function Product(props) {
             }
           </span>
           <span className={styles['product-action']}>
-            <FaCartPlus
-              {...iconeProps}
-              color={haveInCart ? '#008000' : iconeProps.color}
-              onClick={resolveCart}
-            />
+            {cart
+              ? (
+                <div className={styles.quantity}>
+                  Quantidade:
+                  <AiFillMinusCircle
+                    {...quantityProps}
+                    onClick={() => {
+                      if(quantity >= 1) {
+                        dispatch(changeQuantity({ id, quantity: -1 }));
+                      }
+                    }}
+                  />
+                  <span>{String(quantity || 0).padStart(2, '0')}</span>
+                  <AiFillPlusCircle
+                    {...quantityProps}
+                    onClick={() => dispatch(changeQuantity({ id, quantity: +1 }))}
+                  />
+                </div>
+              )
+              : (<FaCartPlus
+                  {...iconeProps}
+                  color={haveInCart ? '#008000' : iconeProps.color}
+                  onClick={resolveCart}
+                />)
+            }
           </span>
         </div>
       </div>

@@ -16,10 +16,16 @@ const cartSlice = createSlice({
         }
       ];
       return state.filter(product => product.id !== payload);
+    },
+    changeQuantity: (state, {payload}) => {
+      state = state.map(productInCart => {
+        if(productInCart.id === payload.id) productInCart.quantity += payload.quantity;
+        return productInCart;
+      })
     }
   }
 });
 
-export const { changeCart } = cartSlice.actions;
+export const { changeCart, changeQuantity } = cartSlice.actions;
 
 export default cartSlice.reducer;
