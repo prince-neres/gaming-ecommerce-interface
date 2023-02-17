@@ -5,7 +5,7 @@ import {
   AiFillMinusCircle,
   AiFillPlusCircle,
 } from 'react-icons/ai'
-import { FaCartPlus, FaFireAlt } from 'react-icons/fa'
+import { FaCartPlus, FaFireAlt, FaTrashAlt } from 'react-icons/fa'
 import { changeFavorite } from 'store/reducers/products';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeCart, changeQuantity } from 'store/reducers/cart';
@@ -71,10 +71,20 @@ export default function Product(props) {
               : <AiOutlineHeart {...iconeProps} onClick={resolveFavorite} />
             }
           </span>
+          {cart
+            ? <span className={styles['product-action']}>
+                <FaTrashAlt
+                  size={20}
+                  color={'FF0000'}
+                  onClick={resolveCart}
+                />
+              </span>
+            : null
+          }
           <span className={styles['product-action']}>
             {cart
               ? (
-                <div className={styles.quantity}>
+                <div className={styles.amount}>
                   Quantidade:
                   <AiFillMinusCircle
                     {...quantityProps}
