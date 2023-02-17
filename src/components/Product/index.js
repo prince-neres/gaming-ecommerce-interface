@@ -5,7 +5,8 @@ import {
 } from 'react-icons/ai'
 import { FaCartPlus, FaFireAlt } from 'react-icons/fa'
 import { changeFavorite } from 'store/reducers/products';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeCart } from 'store/reducers/cart';
 
 
 const iconeProps = {
@@ -25,8 +26,14 @@ export default function Product(props) {
 
   const dispatch = useDispatch();
 
+  const haveInCart = useSelector(state => state.cart.some(productInCart => productInCart.id === id))
+
   const resolveFavorite = () => {
     dispatch(changeFavorite(id));
+  };
+
+  const resolveCart = () => {
+    dispatch(changeCart(id));
   };
 
   return (
@@ -55,7 +62,8 @@ export default function Product(props) {
           <span className={styles['product-action']}>
             <FaCartPlus
               {...iconeProps}
-              color={true ? iconeProps.color : '#008000'}
+              color={haveInCart ? '#008000' : iconeProps.color}
+              onClick={resolveCart}
             />
           </span>
         </div>

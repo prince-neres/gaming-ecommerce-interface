@@ -100,6 +100,7 @@ const productsSlice = createSlice({
     changeFavorite: (state, {payload}) => {
       state = state.map(product => {
         if(product.id === payload) product.favorite = !product.favorite
+        return product;
       })
     }
   }
