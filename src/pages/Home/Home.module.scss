@@ -1,6 +1,7 @@
 @import 'styles/breakpoints';
 
 .categories {
+  text-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -8,6 +9,11 @@
 
   h1 {
     color: #ff7300;
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 20px;
   }
 
   &-container {
@@ -15,7 +21,7 @@
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    width: 100%;
+    width: 45%;
 
     >div {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

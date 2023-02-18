@@ -9,11 +9,11 @@
   text-align: center;
 
   &-name {
-    padding: 16px 16px 0px 16px;
+    padding: 10px 16px 0px 16px;
 
     h2 {
       color: #42464d;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     p {
@@ -47,9 +47,8 @@
     color: #FFF;
     display: flex;
     font-size: 20px;
-    height: 70px;
     justify-content: center;
-    width: 170px;
+    padding: 10px;
   }
 
   &-actions {

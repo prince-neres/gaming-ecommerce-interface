@@ -1,6 +1,6 @@
 import styles from './Home.module.scss';
 import Header from 'components/Header';
-import gamingDevices from 'assets/gaming-devices.jpg';
+import gamingDevices from 'assets/banner-promotion.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -17,7 +17,8 @@ export default function Home () {
       />
       <div className={styles.categories}>
         <div className={styles['categories-title']}>
-          <h1>Categorias:</h1>
+          <h1>Categorias</h1>
+          <p>Confira as categorias de produtos disponíveis:</p>
         </div>
         <div className={styles['categories-container']}>
           {categories.map((category, index) => (

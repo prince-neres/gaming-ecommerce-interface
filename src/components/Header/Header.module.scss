@@ -17,6 +17,7 @@
 
   h1 {
     color: #ff7300;
+    font-size: 28px;
   }
 
   &-text {
@@ -40,7 +41,7 @@
     grid-area: imagem;
     justify-self: center;
     overflow: hidden;
-    max-height: 300px;
+    max-height: 230px;
     max-width: 100%;
   }
 }
