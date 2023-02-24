@@ -62,7 +62,7 @@ export default function Product(props) {
       </div>
       <div className={styles['product-info']}>
         <div className={styles['product-price']}>
-          R$ {price.toFixed(2)}
+          {price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
         </div>
         <div className={styles['product-actions']}>
           <span className={styles['product-action']}>
@@ -94,7 +94,7 @@ export default function Product(props) {
                       }
                     }}
                   />
-                  <span>{String(quantity || 0).padStart(2, '0')}</span>
+                  <span>{String(quantity)}</span>
                   <AiFillPlusCircle
                     {...quantityProps}
                     onClick={() => dispatch(changeQuantity({ id, quantity: +1 }))}

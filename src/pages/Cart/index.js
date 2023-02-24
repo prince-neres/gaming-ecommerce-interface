@@ -40,7 +40,7 @@ export default function Cart () {
         <div className={styles.total}>
           <strong>Resumo da compra</strong>
           <span>
-            Subtotal: <strong>R$ {total.toFixed(2)}</strong>
+            Subtotal: <strong>{total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong>
           </span>
         </div>
         {total

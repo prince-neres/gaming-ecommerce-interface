@@ -1,3 +1,5 @@
+@import 'styles/breakpoints';
+
 .footer {
   position: relative;
   align-items: center;
@@ -8,6 +10,12 @@
   justify-content: space-between;
   padding: 0 50px;
   width: 100%;
+
+  @media(max-width: $mobile-sm) {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
 
   a {
     text-decoration: none;

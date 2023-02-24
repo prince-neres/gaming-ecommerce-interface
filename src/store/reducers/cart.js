@@ -19,7 +19,10 @@ const cartSlice = createSlice({
     },
     changeQuantity: (state, {payload}) => {
       state = state.map(productInCart => {
-        if(productInCart.id === payload.id) productInCart.quantity += payload.quantity;
+        if (productInCart.id === payload.id) {
+          productInCart.quantity += payload.quantity;
+          if(productInCart.quantity === 0) productInCart.quantity = 1;
+        } 
         return productInCart;
       })
     },
