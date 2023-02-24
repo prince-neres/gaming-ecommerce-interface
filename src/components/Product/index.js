@@ -62,7 +62,7 @@ export default function Product(props) {
       </div>
       <div className={styles['product-info']}>
         <div className={styles['product-price']}>
-          {price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
+          {Intl.NumberFormat('pt-BR', { currency: 'BRL', style: 'currency' }).format(price)}
         </div>
         <div className={styles['product-actions']}>
           <span className={styles['product-action']}>

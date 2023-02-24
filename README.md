@@ -10,7 +10,7 @@ Projeto feito como desafio.
 2. `npm start` ou `yarn start`
 
 ### Com Docker
-1. `docker-compose up`
+1. `docker-compose up --build`
 
 ## Preview:
 <h3 align="center">Página incial</h3>

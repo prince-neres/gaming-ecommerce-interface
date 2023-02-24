@@ -24,7 +24,7 @@ export default function Cart () {
     }, []);
     return {
       cart: cartReduce,
-      total
+      total: new Intl.NumberFormat('pt-BR', {currency: 'BRL', style: 'currency'}).format(total)
     };
   });
 
@@ -40,7 +40,7 @@ export default function Cart () {
         <div className={styles.total}>
           <strong>Resumo da compra</strong>
           <span>
-            Subtotal: <strong>{total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong>
+            Subtotal: <strong>{total}</strong>
           </span>
         </div>
         {total
