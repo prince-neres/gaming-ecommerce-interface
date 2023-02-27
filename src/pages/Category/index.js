@@ -17,7 +17,7 @@ export default function Category() {
   });
 
   const products_ordered = products.sort(function (a, b) {
-    return a.score > b.score ? -1 : a.score < b.score ? 1 : 0;
+    return b.score - a.score
   });
 
   return (
