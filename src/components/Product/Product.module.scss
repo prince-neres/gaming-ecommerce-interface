@@ -1,3 +1,5 @@
+@import 'styles/breakpoints';
+
 .product {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: white;
@@ -104,4 +106,29 @@
     justify-content: flex-end;
     padding: 0 50px;
   }
+
+  @media(max-width: $mobile-sm) {
+    flex-direction: unset;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .product-actions {
+      gap: 0px;
+      padding: 0px;
+      justify-content: center;
+    }
+
+    .product-action {
+      padding: 10px 10px 0px 10px;
+    }
+
+  }
 }
+
