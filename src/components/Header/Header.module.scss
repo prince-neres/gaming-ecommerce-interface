@@ -1,17 +1,17 @@
-@import 'styles/breakpoints';
+@import "styles/breakpoints";
 
 .header {
   padding: 50px 100px 25px 100px;
   display: grid;
-  grid-template-areas: 'texto imagem';
+  grid-template-areas: "texto imagem";
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     gap: 20px;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: 'texto' 'imagem';
+    grid-template-areas: "texto" "imagem";
     text-align: center;
   }
 
@@ -21,7 +21,7 @@
   }
 
   &-text {
-    color: #42464d;;
+    color: #42464d;
     grid-area: texto;
     font-size: 20px;
   }
@@ -29,7 +29,7 @@
   &-button {
     display: flex;
 
-    @media(max-width: $tablet) {
+    @media (max-width: $tablet) {
       justify-content: center;
     }
   }
@@ -43,5 +43,13 @@
     overflow: hidden;
     max-height: 230px;
     max-width: 100%;
+  }
+
+  @media (max-width: $mobile-sm) {
+    padding: 50px;
+
+    &-image {
+      display: none;
+    }
   }
 }

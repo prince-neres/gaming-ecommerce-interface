@@ -1,7 +1,13 @@
+@import "styles/breakpoints";
+
 .products {
-  padding: 0px 30px 80px 30px;
+  padding: 0px 100px 80px 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: $mobile-sm) {
+    padding: 0px 20px 80px 20px;
+  }
 }

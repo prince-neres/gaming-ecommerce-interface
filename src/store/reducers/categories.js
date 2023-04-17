@@ -1,17 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
-import gamesBanner from 'assets/banner-games.jpg';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
-    id: 'jogos',
-    name: 'Jogos',
-    description: 'Os melhores e mais populares jogos estão aqui!',
-    image: gamesBanner
-  }
+    id: "jogos",
+    name: "Jogos",
+    description: "Os melhores e mais populares jogos estão aqui!",
+  },
 ];
 
 const categoriesSlice = createSlice({
-  name: 'Categories',
+  name: "Categories",
   initialState,
 });
 
